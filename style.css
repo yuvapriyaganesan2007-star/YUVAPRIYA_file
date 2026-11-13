@@ -1,0 +1,263 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f6ff;
+    color: #252642;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 65px 20px 30px;
+}
+
+.header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #252642;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: #777991;
+    font-size: 16px;
+}
+
+/* Main Container */
+.pricing-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Billing Toggle */
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0 45px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.discount {
+    background: #e3e0ff;
+    color: #6653d9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #b8b8ca;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #7257e8;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.pricing-card {
+    position: relative;
+    background: white;
+    padding: 38px 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(50, 45, 100, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eeeeF5;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(80, 65, 160, 0.15);
+}
+
+.pricing-card h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #85859a;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Prices */
+.price {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #252642;
+}
+
+.price span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #88889b;
+}
+
+/* Features */
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    padding: 11px 0;
+    font-size: 13px;
+    color: #68687e;
+    border-bottom: 1px solid #f0f0f5;
+}
+
+/* Buttons */
+.pricing-card button {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #7257e8;
+    background: white;
+    color: #7257e8;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pricing-card button:hover {
+    background: #7257e8;
+    color: white;
+}
+
+/* Popular Plan */
+.popular {
+    border: 2px solid #7257e8;
+    transform: scale(1.03);
+}
+
+.popular:hover {
+    transform: scale(1.03) translateY(-10px);
+}
+
+.popular button {
+    background: #7257e8;
+    color: white;
+}
+
+.popular button:hover {
+    background: #5b40d0;
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    background: #7257e8;
+    color: white;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.best-value {
+    background: #16a37b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 45px 15px 25px;
+    color: #9999aa;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .pricing-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-10px);
+    }
+
+    .billing-toggle {
+        gap: 9px;
+    }
+}
